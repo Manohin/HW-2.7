@@ -66,8 +66,14 @@ extension ViewController: UICollectionViewDataSource {
             cell.contentView.backgroundColor = BackGroundColors.first
         case 1:
             cell.contentView.backgroundColor = BackGroundColors.second
+            cell.titleLabel.text = ""
+            cell.bodyLabel.text = "Duis aute irure dolor in reprehenderit in voluptate velit esse"
         default:
             cell.contentView.backgroundColor = BackGroundColors.third
+            cell.titleLabel.text = ""
+            cell.bodyLabel.text = "sunt in culpa qui officia"
+            cell.enterButton.isHidden = false
+            cell.registrationButton.isHidden = false
         }
         cell.imageView.image = UIImage(named: source[indexPath.item].imageName)
         return cell
